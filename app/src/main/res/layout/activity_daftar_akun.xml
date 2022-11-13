@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DaftarAkun">
+
+  <ScrollView
+      android:id="@+id/scrollView1"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="60dp"
+      android:fillViewport="true"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvHp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Nomor Handphone"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtHp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/bundar"
+            android:drawableStart="@android:drawable/stat_sys_phone_call_forward"
+            android:ems="10"
+            android:hint="Nomor Ponsel"
+            android:inputType="phone"
+            android:maxLength="16"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHp" />
+
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Nama"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHp" />
+
+        <EditText
+            android:id="@+id/txtNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/bundar"
+            android:drawableStart="@android:drawable/ic_menu_myplaces"
+            android:drawableTint="@color/teal_700"
+            android:ems="14"
+            android:hint="Nama Lengkap Anda"
+            android:inputType="textPersonName"
+            android:maxLength="50"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNama" />
+
+        <TextView
+            android:id="@+id/tvTglLahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="28dp"
+            android:text="Tanggal Lahir"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNama" />
+
+        <EditText
+            android:id="@+id/txtTglLahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bundar"
+            android:ems="6"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            android:text="31/12/1980"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/tvTglLahir"
+            app:layout_constraintTop_toBottomOf="@+id/txtNama" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Gender"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTglLahir" />
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:checkedButton="@id/rdPria"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/tvGender"
+            app:layout_constraintTop_toBottomOf="@+id/txtTglLahir">
+
+          <RadioButton
+              android:id="@+id/rdPria"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:buttonTint="@color/white"
+              android:text="Pria"
+              android:textColor="@color/white"
+              android:textStyle="bold" />
+
+          <RadioButton
+              android:id="@+id/rdWanita"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="20dp"
+              android:buttonTint="@color/white"
+              android:text="Wanita"
+              android:textColor="@color/white"
+              android:textStyle="bold" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvSimTglLahir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:text="1980-12-31"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/txtNama"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvHp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:text="Alamat"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGender" />
+
+        <EditText
+            android:id="@+id/txtAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="92dp"
+            android:background="@drawable/bundar"
+            android:ems="15"
+            android:gravity="start|top"
+            android:hint="Alamat Anda"
+            android:inputType="textMultiLine"
+            android:maxLength="160"
+            android:maxLines="2"
+            android:minLines="2"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTglLahir" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAlamat" />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/bundar"
+            android:ems="14"
+            android:hint="Email anda (opsional)"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:minHeight="48dp"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tinPassword"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:hint="Masukkan Password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+            app:passwordToggleEnabled="true">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/txtPassword"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:background="@drawable/bundar"
+              android:drawableStart="@android:drawable/ic_lock_lock"
+              android:inputType="textPassword"
+              android:maxLength="16"
+              android:paddingStart="3dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/imgUploadFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tinPassword"
+            app:srcCompat="@drawable/fototom_bgmerah" />
+
+        <Button
+            android:id="@+id/btnUploadFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/teal_200"
+            android:drawableLeft="@drawable/ic_menu_gallery"
+            android:drawableRight="@drawable/ic_menu_gallery"
+            android:drawableTint="@color/white"
+            android:text="UPLOAD FOTO"
+            app:cornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgUploadFoto"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+  </ScrollView>
+
+  <Button
+      android:id="@+id/btnRegister"
+      android:layout_width="150dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginBottom="16dp"
+      android:backgroundTint="?android:attr/colorPressedHighlight"
+      android:text="Daftar"
+      android:textAlignment="textStart"
+      android:textAllCaps="false"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:cornerRadius="25dp"
+      app:icon="@drawable/ic_menu_slideshow"
+      app:iconTint="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/scrollView1"
+      app:strokeColor="@color/white"
+      app:strokeWidth="2dp" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
