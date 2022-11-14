@@ -47,9 +47,9 @@ import java.util.Map;
 
 public class DaftarAkun extends AppCompatActivity {
 
-    EditText txtHp, txtNama, txtTglLahir, txtAlamat, txtEmail;
+    EditText txtHp, txtNama, txtTglLahir, txtAlamat, txtDomisili;
     TextView tvSimTglLahir;
-    EditText txtPassword;
+    EditText txtAsalSekolah;
     Button btnRegister;
     DatePickerDialog dtPd;
     SimpleDateFormat dtFor,dtFor2;
@@ -117,8 +117,8 @@ public class DaftarAkun extends AppCompatActivity {
             param.put("nama", txtNama.getText().toString().trim());
             param.put("tgllahir", tvSimTglLahir.getText().toString());
             param.put("alamat", txtAlamat.getText().toString().trim());
-            param.put("email", txtEmail.getText().toString().trim());
-            param.put("pass", txtPassword.getText().toString().trim());
+            param.put("domisili", txtDomisili.getText().toString().trim());
+            param.put("asalsekolah", txtAsalSekolah.getText().toString().trim());
             param.put("fotodaftar", getStringImage(decoded));
             return param;
         }
@@ -165,9 +165,8 @@ public class DaftarAkun extends AppCompatActivity {
         txtNama = (EditText) findViewById(R.id.txtNama);
         txtTglLahir = (EditText) findViewById(R.id.txtTglLahir);
         txtAlamat = (EditText) findViewById(R.id.txtAlamat);
-        txtEmail = (EditText) findViewById(R.id.txtEmail);
-
-        txtPassword = (EditText) findViewById(R.id.txtPassword);
+        txtDomisili = (EditText) findViewById(R.id.txtDomisili);
+        txtAsalSekolah = (EditText) findViewById(R.id.txtAsalSekolah);
 
 
         btnRegister = (Button) findViewById(R.id.btnRegister);
@@ -230,13 +229,13 @@ public class DaftarAkun extends AppCompatActivity {
                     txtAlamat.setError("Alamat tidak boleh kosong!");
                     txtAlamat.requestFocus();
                 }
-                else if(txtPassword.getText().toString().trim().isEmpty()){
-                    txtPassword.setError("Password minimal 4 karakter!");
-                    txtPassword.requestFocus();
+                else if(txtAsalSekolah.getText().toString().trim().isEmpty()){
+                    txtAsalSekolah.setError("Password minimal 4 karakter!");
+                    txtAsalSekolah.requestFocus();
                 }
-                else if(txtEmail.getText().toString().isEmpty()){
-                    txtEmail.setError("Jika diisi, format email harus: email@email.com!");
-                    txtEmail.requestFocus();
+                else if(txtDomisili.getText().toString().isEmpty()){
+                    txtDomisili.setError("Jika diisi, format email harus: email@email.com!");
+                    txtDomisili.requestFocus();
                 }
                 else if (cFoto == 0){
                     Toast.makeText(getApplicationContext(), "Harap upload Foto!",

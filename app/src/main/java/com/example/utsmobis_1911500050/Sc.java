@@ -21,7 +21,7 @@ public class Sc extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), e.getMessage(),
                             Toast.LENGTH_LONG).show(); //tampilkan pesan
                 } finally{ //setelah 3 detik berlalu
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), DaftarAkun.class);
                     startActivity(intent); //tampilkan halaman Main
                     finish(); //tutup halaman splash screen
                 }
