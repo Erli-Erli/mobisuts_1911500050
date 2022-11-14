@@ -7,6 +7,7 @@
         private static String URL=global_ipaddress+"/utsmobiss/android/";
         public String getURL() {
             return URL;
+
         }
         public void setURL(String url) {
             URL = url;
