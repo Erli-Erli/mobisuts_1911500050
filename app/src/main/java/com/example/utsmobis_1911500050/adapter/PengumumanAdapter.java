@@ -23,6 +23,8 @@ import com.example.utsmobis_1911500050.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class PengumumanAdapter extends RecyclerView.Adapter<PengumumanAdapter.ViewHolder> {
     Context context;
     ArrayList<HashMap<String, String>>list_data;
@@ -34,7 +36,7 @@ public class PengumumanAdapter extends RecyclerView.Adapter<PengumumanAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.pengumuman_item, null);
+                .inflate(R.layout.pengumuman_list_item, null);
         return new ViewHolder(view);
     }
 
@@ -58,7 +60,7 @@ public class PengumumanAdapter extends RecyclerView.Adapter<PengumumanAdapter.Vi
 
         holder.tvJdlPengumuman.setText(list_data.get(holder.getAdapterPosition()).get("judul"));
         holder.tvTglPengumuman.setText(list_data.get(holder.getAdapterPosition()).get("tglPost"));
-        holder.tvDeskripsi.setText(list_data.get(holder.getAdapterPosition()).get("deskripsi"));
+        holder.tvDeskripsi.setText(list_data.get(holder.getAdapterPosition()).get("desc"));
     }
 
     @Override
